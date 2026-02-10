@@ -1,1 +1,75 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+/* @import "simplebar-react/dist/simplebar.min.css"; */
+
+:root {
+  interpolate-size: allow-keywords;
+}
+
+body {
+    font-family: "Public Sans", sans-serif;
+}
+
+/* 
+.simplebar-scrollbar::before {
+  @apply bg-primary/30;
+} */
+
+@theme {
+  /* Font */
+  /* --font-public-sans: var(--font-public-sans); */
+
+  /* Corlos */
+  --color-primary-lighter: #cde9fd;
+  --color-primary-light: #6bb1f8;
+  --color-primary: #0c68e9;
+  --color-primary-dark: #063ba7;
+  --color-primary-darker: #021d6f;
+
+  --color-secondary-lighter: #efd6ff;
+  --color-secondary-light: #c684ff;
+  --color-secondary: #8e33ff;
+  --color-secondary-dark: #5119b7;
+  --color-secondary-darker: #27097a;
+
+  --color-info-lighter: #cafdf5;
+  --color-info-light: #61f3f3;
+  --color-info: #00b8d9;
+  --color-info-dark: #006c9c;
+  --color-info-darker: #003768;
+
+  --color-success-lighter: #d3fcd2;
+  --color-success-light: #77ed8b;
+  --color-success: #22c55e;
+  --color-success-dark: #118d57;
+  --color-success-darker: #065e49;
+
+  --color-warning-lighter: #fff5cc;
+  --color-warning-light: #ffd666;
+  --color-warning: #ffab00;
+  --color-warning-dark: #b76e00;
+  --color-warning-darker: #7a4100;
+
+  --color-error-lighter: #ffe9d5;
+  --color-error-light: #ffac82;
+  --color-error: #ff5630;
+  --color-error-dark: #b71d18;
+  --color-error-darker: #7a0916;
+
+  --color-gray-50: #fcfdfd;
+  --color-gray-100: #f9fafb;
+  --color-gray-200: #f4f6f8;
+  --color-gray-300: #dfe3e8;
+  --color-gray-400: #c4cdd5;
+  --color-gray-500: #919eab;
+  --color-gray-600: #637381;
+  --color-gray-700: #454f5b;
+  --color-gray-800: #1c252e;
+  --color-gray-900: #141a21;
+
+  /* Shdaow */
+  --shadow-card:
+    0 0 2px 0 rgba(145, 158, 171, 0.2), 0 12px 24px -4px
+    rgba(145, 158, 171, 0.12);
+}
