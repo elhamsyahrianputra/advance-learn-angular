@@ -1,20 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import "tailwindcss";
-/* @import "simplebar-react/dist/simplebar.min.css"; */
+@import "simplebar-core/dist/simplebar.css";
 
 :root {
   interpolate-size: allow-keywords;
 }
 
 body {
-    font-family: "Public Sans", sans-serif;
+  font-family: "Public Sans", sans-serif;
 }
 
-/* 
 .simplebar-scrollbar::before {
-  @apply bg-primary/30;
-} */
+  @apply bg-gray-500!;
+}
 
 @theme {
   /* Font */
@@ -70,6 +69,5 @@ body {
 
   /* Shdaow */
   --shadow-card:
-    0 0 2px 0 rgba(145, 158, 171, 0.2), 0 12px 24px -4px
-    rgba(145, 158, 171, 0.12);
+    0 0 2px 0 rgba(145, 158, 171, 0.2), 0 12px 24px -4px rgba(145, 158, 171, 0.12);
 }

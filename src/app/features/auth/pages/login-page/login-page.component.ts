@@ -8,13 +8,11 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { ToastService } from '../../../../core/services/toast.service';
 import { AuthService } from '../../services/auth.service';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-login-page',
-  imports: [InputComponent, ButtonComponent, RouterLink, ReactiveFormsModule, CommonModule],
+  imports: [InputComponent, ButtonComponent, RouterLink, ReactiveFormsModule],
   templateUrl: './login-page.component.html',
 })
 export class LoginPageComponent {

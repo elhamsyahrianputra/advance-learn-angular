@@ -1,0 +1,15 @@
+<li
+  class="relative before:absolute before:top-0 before:right-full before:-left-3.25 before:block before:h-5 before:w-3.25 before:rounded-bl-lg before:border-b-2 before:border-l-2 before:border-gray-300 before:content-[''] first:pt-1"
+>
+  <a
+    #rla="routerLinkActive"
+    [class]="
+      rla.isActive ? 'font-semibold text-gray-700' : 'font-medium text-gray-600'
+    "
+    [routerLinkActiveOptions]="{ exact }"
+    [routerLink]="href"
+    class="left-0 flex min-h-9 items-center rounded-lg py-1 pr-2 pl-3 text-sm hover:bg-gray-500/8"
+    routerLinkActive="bg-gray-500/8"
+    >{{ label }}</a
+  >
+</li>

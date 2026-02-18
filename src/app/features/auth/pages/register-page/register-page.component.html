@@ -27,18 +27,35 @@
     </div>
   </div>
 
-  <form>
+  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     <div class="flex flex-col gap-y-6 pt-10">
       <div class="flex flex-col gap-x-4 gap-y-6 md:flex-row">
-        <app-input label="First Name" />
-        <app-input label="Last Name" />
+        <app-input
+          label="First Name"
+          [control]="registerForm.controls.first_name"
+          [submitted]="submitted"
+        />
+        <app-input
+          label="Last Name"
+          [control]="registerForm.controls.last_name"
+          [submitted]="submitted"
+        />
       </div>
 
-      <app-input label="Email address" />
+      <app-input
+        label="Username"
+        [control]="registerForm.controls.username"
+        [submitted]="submitted"
+      />
 
-      <app-input label="Password" placeholder="8+ characters" />
+      <app-input
+        label="Password"
+        placeholder="8+ characters"
+        [control]="registerForm.controls.password"
+        [submitted]="submitted"
+      />
 
-      <app-button>Create account</app-button>
+      <app-button type="submit">Create account</app-button>
     </div>
   </form>
 

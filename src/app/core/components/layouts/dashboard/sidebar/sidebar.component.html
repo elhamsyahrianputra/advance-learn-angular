@@ -1,0 +1,83 @@
+<app-sidebar-wrapper>
+  <app-sidebar-section label="Overview">
+    <app-sidebar-item
+      [exact]="true"
+      href="/dashboard"
+      icon="dashboard"
+      label="App"
+    />
+    <app-sidebar-item
+      href="/dashboard/ecommerce"
+      icon="ecommerce"
+      label="Ecommerce"
+    />
+    <app-sidebar-item
+      href="/dashboard/ecommerce"
+      icon="analytics"
+      label="Analytics"
+    />
+    <app-sidebar-item
+      href="/dashboard/ecommerce"
+      icon="banking"
+      label="Banking"
+    />
+    <app-sidebar-item
+      href="/dashboard/ecommerce"
+      icon="booking"
+      label="Booking"
+    />
+    <app-sidebar-item href="/dashboard/ecommerce" icon="file" label="File" />
+    <app-sidebar-item
+      href="/dashboard/ecommerce"
+      icon="course"
+      label="Course"
+    />
+  </app-sidebar-section>
+
+  <!-- Management -->
+  <app-sidebar-section label="Management">
+    <app-sidebar-dropdown icon="user" label="User" prefix="/dashboard/users">
+      <app-sidebar-dropdown-item
+        [exact]="true"
+        href="/dashboard/users"
+        label="List"
+      />
+      <app-sidebar-dropdown-item
+        href="/dashboard/users/detail"
+        label="Detail"
+      />
+      <app-sidebar-dropdown-item
+        href="/dashboard/users/create"
+        label="Create"
+      />
+      <app-sidebar-dropdown-item
+        href="/dashboard/users/update"
+        label="Update"
+      />
+      <app-sidebar-dropdown-item
+        href="/dashboard/users/delete"
+        label="Delete"
+      />
+    </app-sidebar-dropdown>
+    <app-sidebar-dropdown
+      icon="product"
+      label="Product"
+      prefix="/dashboard/products"
+    ></app-sidebar-dropdown>
+    <app-sidebar-dropdown
+      icon="order"
+      label="Order"
+      prefix="/dashboard/orders"
+    ></app-sidebar-dropdown>
+    <app-sidebar-dropdown
+      icon="invoice"
+      label="Invoice"
+      prefix="/dashboard/invoices"
+    ></app-sidebar-dropdown>
+    <app-sidebar-dropdown
+      icon="blog"
+      label="Blog"
+      prefix="/dashboard/blogs"
+    ></app-sidebar-dropdown>
+  </app-sidebar-section>
+</app-sidebar-wrapper>

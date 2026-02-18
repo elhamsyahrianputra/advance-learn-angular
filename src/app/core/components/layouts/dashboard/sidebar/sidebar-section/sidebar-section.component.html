@@ -1,0 +1,33 @@
+<li>
+  <button
+    (click)="toggleSidebar()"
+    class="group relative flex w-full cursor-pointer items-center pt-4 pr-2 pb-2 pl-3 text-[11px] font-bold text-gray-500 uppercase transition-colors duration-300 ease-in-out hover:text-gray-800"
+  >
+    <span
+      class="absolute -left-1 opacity-0 transition-all duration-300 ease-in-out group-hover:opacity-100"
+      [class]="isExpanded ? 'rotate-0' : '-rotate-90'"
+    >
+      <svg
+        class="size-4 transition-transform duration-300 ease-in-out"
+        aria-hidden="true"
+        height="1em"
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M12 16a1 1 0 0 1-.64-.23l-6-5a1 1 0 1 1 1.28-1.54L12 13.71l5.36-4.32a1 1 0 0 1 1.41.15a1 1 0 0 1-.14 1.46l-6 4.83A1 1 0 0 1 12 16"
+          fill="currentColor"
+        ></path>
+      </svg>
+    </span>
+    <span class="duration-300 group-hover:pl-1">{{ label }}</span>
+  </button>
+
+  <ul
+    class="flex flex-col gap-y-1 overflow-hidden transition-[height] duration-300 ease-in-out"
+    [class]="isExpanded ? 'h-fits' : 'h-0'"
+  >
+    <ng-content />
+  </ul>
+</li>

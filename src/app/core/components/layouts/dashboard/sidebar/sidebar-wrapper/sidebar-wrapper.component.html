@@ -1,0 +1,17 @@
+<aside
+  class="fixed flex h-screen w-72 flex-col border-r border-r-gray-500/12 bg-white xl:w-75"
+>
+  <div class="flex pt-5 pb-2 pl-7">
+    <img alt="" class="size-10" src="/img/logo/minimal-logo-blue.svg" />
+  </div>
+
+  <div class="flex-1 overflow-hidden">
+    <nav class="h-full">
+      <ngx-simplebar [options]="{ autoHide: true }" class="h-full">
+        <ul class="flex flex-col px-4 gap-y-1 pb-4">
+          <ng-content />
+        </ul>
+      </ngx-simplebar>
+    </nav>
+  </div>
+</aside>

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
+import { SimplebarAngularModule } from 'simplebar-angular';
+import { SidebarComponent } from '../sidebar/sidebar.component';
 
 @Component({
   selector: 'app-index',
-  imports: [],
+  imports: [SimplebarAngularModule, SidebarComponent],
   templateUrl: './index.component.html',
-  styles: ``
+  styles: ``,
 })
-export class IndexComponent {
-
-}
+export class IndexComponent {}

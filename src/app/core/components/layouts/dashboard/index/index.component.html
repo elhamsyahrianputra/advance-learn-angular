@@ -1,55 +1,32 @@
-<!-- hanya untuk ngubah bacgkourndnya jadi gelap -->
-<div class="absolute h-full w-full bg-black/24"></div>
-<aside class="fixed h-full bg-white">
-  <div class="flex pt-5 pb-2 pl-7">
-    <img class="size-10" src="img/logo/minimal-logo-blue.svg" alt="" />
-  </div>
+<app-sidebar />
 
-  <div class="w-72">
-    <nav class="px-4">
-      <ul class="flex flex-col">
-        <li>
-          <button
-            class="group pt-4 pr-2 pb-2 pl-3 text-[11px] font-bold text-gray-500 uppercase transition-colors duration-300 ease-in-out hover:text-gray-800"
-          >
-            <span class="group-hover:pl-1 duration-300">Overview</span>
-          </button>
-          <ul class="flex flex-col gap-y-1">
-            <li>
-              <a
-                class="bg-primary/8 hover:bg-primary/16 flex min-h-11 items-center gap-x-3 rounded-lg py-1 pr-2 pl-3"
-                href="#"
-              >
-                <!-- Ini harusnya icon, sementara buat placeholder -->
-                <span class="bg-primary block size-6"></span>
-                <span class="text-primary text-sm leading-5.5 font-semibold"
-                  >App</span
-                >
-              </a>
-            </li>
-            <li>
-              <a
-                href="#"
-                class="flex min-h-11 items-center gap-x-3 rounded-lg px-1 py-1 pr-2 pl-3 hover:bg-gray-500/8"
-              >
-                <span class="block size-6 bg-gray-400"></span>
-                <span class="text-sm leading-5.5 font-medium text-gray-600"
-                  >Ecommerce</span
-                >
-              </a>
-            </li>
-            <li>Analytics</li>
-          </ul>
-        </li>
-        <li>
-          <button>Management</button>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </div>
-</aside>
+<div class="xl:pl-75 h-2000">
+  <header class="flex h-18 items-center sticky top-0 z-1000 justify-between px-10">
+    <div></div>
+    <div class="flex gap-x-1.5">
+      <button class="size-10 flex justify-center items-center">
+        <img
+          alt=""
+          class="size-6 animate-spin [animation-duration:9s]"
+          src="/icon/settings.svg"
+        />
+      </button>
+      <button
+        class="relative flex size-10 items-center justify-center"
+        title="Logout"
+        type="button"
+      >
+        <span
+          class="absolute block size-10 animate-spin rounded-full bg-linear-to-r from-warning via-gray-500 to-primary [animation-duration:8s]"
+        ></span>
+        <img
+          alt="Admin User"
+          class="relative z-10 box-content rounded-full bg-white from-0% via-45% to-55% p-0.5"
+          height="34"
+          src="/img/avatar.webp"
+          width="34"
+        />
+      </button>
+    </div>
+  </header>
+</div>

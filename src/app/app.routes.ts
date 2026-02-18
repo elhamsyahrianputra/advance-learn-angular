@@ -6,25 +6,36 @@ import { RegisterPageComponent } from './features/auth/pages/register-page/regis
 import { IndexComponent as DashboardLayout } from './core/components/layouts/dashboard/index/index.component';
 
 export const routes: Routes = [
-    // Auth
-    {
-        path: 'auth',
-        component: AuthLayout,
+  // Auth
+  {
+    path: 'auth',
+    component: AuthLayout,
+    children: [
+      { path: 'login', component: LoginPageComponent },
+      { path: 'register', component: RegisterPageComponent },
+    ],
+  },
+
+  // Dashboard
+  {
+    path: 'dashboard',
+    component: DashboardLayout,
+    children: [
+      {
+        path: 'users',
+        component: DashboardLayout,
         children: [
-            { path: 'login', component: LoginPageComponent },
-            { path: 'register', component: RegisterPageComponent },
-        ]
-    },
+          { path: '', component: DashboardLayout },
+          { path: 'detail', component: DashboardLayout },
+        ],
+      },
+      { path: 'products', component: DashboardLayout },
+    ],
+  },
 
-    // Dashboard
-    {
-        path: 'dashboard',
-        component: DashboardLayout
-    },
-
-    // Landing
-    {
-        path: '',
-        component: LandingLayout
-    }
+  // Landing
+  {
+    path: '',
+    component: LandingLayout,
+  },
 ];
